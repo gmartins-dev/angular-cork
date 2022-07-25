@@ -1,5 +1,6 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Moment } from 'src/app/Moment';
 
 @Component({
   selector: 'app-post-form',
@@ -8,6 +9,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 })
 export class PostFormComponent implements OnInit {
   @Input() btnText!: string;
+  @Output() onSubmit = new EventEmitter<Moment>();
 
   postForm!: FormGroup;
 
@@ -36,5 +38,14 @@ export class PostFormComponent implements OnInit {
     }
 
     console.log('envio formulario test');
+    console.log(this.postForm.value);
+
+    this.onSubmit.emit(this.postForm.value);
+  }
+
+  onFileSelected(event: any) {
+    const file: File = event.target.files[0];
+
+    this.postForm.patchValue({ image: file });
   }
 }
