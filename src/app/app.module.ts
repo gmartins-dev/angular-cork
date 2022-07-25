@@ -12,6 +12,8 @@ import { AboutComponent } from './components/pages/about/about.component';
 import { HomeComponent } from './components/pages/home/home.component';
 import { NewPostComponent } from './components/pages/new-post/new-post.component';
 import { PostFormComponent } from './components/post-form/post-form.component';
+import { MessagesComponent } from './components/messages/messages.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -22,6 +24,7 @@ import { PostFormComponent } from './components/post-form/post-form.component';
     HomeComponent,
     NewPostComponent,
     PostFormComponent,
+    MessagesComponent,
   ],
   imports: [
     BrowserModule,
@@ -29,6 +32,7 @@ import { PostFormComponent } from './components/post-form/post-form.component';
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
+    FontAwesomeModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
