@@ -1,1 +1,7 @@
-<p>Home Page</p>
+<div class="home-container">
+  <h1>Veja o que estão compartilhando</h1>
+  <!-- form de busca -->
+  <div *ngFor="let post of posts">
+    <h2>{{post.title}}</h2>
+  </div>
+</div>
