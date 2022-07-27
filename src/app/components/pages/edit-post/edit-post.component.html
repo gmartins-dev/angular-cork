@@ -1,0 +1,10 @@
+<div *ngIf="post">
+  <h2>
+    Editando o momento <span>{{ post.title }}</span
+    >!
+  </h2>
+  <app-post-form
+    [postData]="post"
+    [btnText]="btnText"
+  ></app-post-form>
+</div>

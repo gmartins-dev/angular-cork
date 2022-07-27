@@ -15,6 +15,7 @@ import { PostFormComponent } from './components/post-form/post-form.component';
 import { MessagesComponent } from './components/messages/messages.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { PostComponent } from './components/pages/post/post.component';
+import { EditPostComponent } from './components/pages/edit-post/edit-post.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { PostComponent } from './components/pages/post/post.component';
     PostFormComponent,
     MessagesComponent,
     PostComponent,
+    EditPostComponent,
   ],
   imports: [
     BrowserModule,

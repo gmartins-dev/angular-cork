@@ -1,3 +1,4 @@
+import { EditPostComponent } from './components/pages/edit-post/edit-post.component';
 import { PostComponent } from './components/pages/post/post.component';
 import { NewPostComponent } from './components/pages/new-post/new-post.component';
 import { AboutComponent } from './components/pages/about/about.component';
@@ -9,6 +10,7 @@ const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'about', component: AboutComponent },
   { path: 'posts/new', component: NewPostComponent },
+  { path: 'posts/edit/:id', component: EditPostComponent },
   { path: 'posts/:id', component: PostComponent },
 ];
 
