@@ -4,7 +4,10 @@
     >!
   </h2>
   <app-post-form
+    (onSubmit)="editHandler($event)"
     [postData]="post"
     [btnText]="btnText"
   ></app-post-form>
 </div>
+
+
