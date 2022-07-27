@@ -37,8 +37,8 @@ export class HomeComponent implements OnInit {
     const target = e.target as HTMLInputElement;
     const value = target.value;
 
-    this.posts = this.allPosts.filter((post) =>
-      post.title.toLowerCase().includes(value)
-    );
+    this.posts = this.allPosts.filter((post) => {
+      return post.title.toLowerCase().includes(value);
+    });
   }
 }
