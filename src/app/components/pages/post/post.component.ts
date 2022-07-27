@@ -19,7 +19,9 @@ export class PostComponent implements OnInit {
 
   constructor(
     private postService: PostService,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private messagesService: MessagesService,
+    private router: Router
   ) {}
 
   ngOnInit(): void {
@@ -28,15 +30,13 @@ export class PostComponent implements OnInit {
     this.postService.getPost(id).subscribe((item) => (this.post = item.data));
   }
 
-  // async removeHandler(id: number) {
-  //   if (id) {
-  //     await this.postService.removeMoment(id).subscribe();
+  async removeHandler(id: number) {
+    if (id) {
+      await this.postService.removePost(id).subscribe();
 
-  //     this.MessagesService.add(`Post excluído com sucesso!`);
+      this.messagesService.add(`Post excluído com sucesso!`);
 
-  //     this.Router.navigate(['/']);
-  //   }
-  // }
-
-  // (click)="removeHandler(post.id!)
+      this.router.navigate(['/']);
+    }
+  }
 }

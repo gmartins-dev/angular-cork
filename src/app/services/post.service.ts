@@ -27,4 +27,9 @@ export class PostService {
     const url = `${this.apiUrl}/${id}`;
     return this.http.get<Response<Moment>>(url);
   }
+
+  removePost(id: number) {
+    const url = `${this.apiUrl}/${id}`;
+    return this.http.delete(url);
+  }
 }
